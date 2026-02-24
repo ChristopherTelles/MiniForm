@@ -6,14 +6,27 @@ let erro = document.getElementById("erro");
 // console.log(nome.value, senha.value);
 
 btn.addEventListener("click", () => {
-  erro.textContent =
-    nome.value.trim() === "" || senha.value.trim() === ""
-      ? "Preencha todos os campos"
-      : "";
+  if (nome.value.trim() === "" || senha.value.trim() === "") {
+    erro.textContent = "Preencha todos os campos";
+    erro.style.color = "red";
+    return;
+  }
 
-  if (erro.textContent !== "") return;
+  if (senha.value.length < 4) {
+    erro.textContent = "A senha deve conter pelo menos 4 caracteres";
+    erro.style.color = "red";
+    return;
+  }
 
-  console.log(`Nome: ${nome.value} \nSenha: ${senha.value}`);
+  if (nome.value.length < 3) {
+    erro.textContent = "O nome deve conter pelo menos 3 caracteres";
+    erro.style.color = "red";
+    return;
+  }
+
+  // Se chegou aqui, está tudo certo
+  erro.textContent = "Login válido ✔";
+  erro.style.color = "green";
 });
 
 btn_olho.addEventListener("click", function () {
