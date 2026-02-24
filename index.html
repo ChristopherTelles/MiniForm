@@ -1,22 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="login">
-        <h1 class="form" >Faça login</h1>
-        <div class="nome TD"><h1>Nome :</h1><input type="text" id="nome"><br/></div>
-        <div class="senha TD"><h1>Senha :</h1><input type="password" id="senha"></div>
-        <div class="mensagem">
-            <h1 id="erro"></h1>
-        </div>
-        <button type="button" id="btn">Entrar</button>
+      <h1 class="form">Faça login</h1>
+      <div class="nome TD">
+        <h1>Nome :</h1>
+        <input type="text" id="nome" /><br />
+      </div>
+      <div class="senha TD">
+        <h1>Senha :</h1>
+        <input
+          type="password"
+          id="senha"
+          minlength="4"
+          maxlength="8"
+          required
+        />
+        <button id="btn-olho">
+          <img class="olhos" src="assets/icon/olho-fechado.png" alt="" />
+        </button>
+      </div>
+      <div class="mensagem">
+        <h1 id="erro"></h1>
+      </div>
+      <button type="button" id="btn">Entrar</button>
     </div>
 
- <script src="assets/script.js"></script>
-</body>
+    <script src="assets/script.js"></script>
+  </body>
 </html>
